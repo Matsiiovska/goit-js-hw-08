@@ -16,7 +16,7 @@ function inputData(evt) {
   localStorage.setItem(LOCAL_KEY, JSON.stringify(dataForm));
 }
 
-function reloadPage() {
+function reloadPage() { //зберігає після перезавантаження сторінки в полх інпут і повідомлення
   if (dataForm) {
     email.value = dataForm.email || '';
     message.value = dataForm.message || '';
@@ -27,7 +27,7 @@ function formSubmit(evt) {
   evt.preventDefault();
   console.log({ email: email.value, message: message.value });
 
-  if (email.value === '' || mewssage.value === '') {
+  if (email.value === '' || message.value === '') {
     return alert('Please fill in all the fields!');
   }
 
